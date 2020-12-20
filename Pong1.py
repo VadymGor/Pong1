@@ -27,13 +27,21 @@ paddle_b.penup()
 paddle_b.goto(350, 0)
 
 # Ball
-paddle_a = turtle.Turtle()
-paddle_a.speed(0)
-paddle_a.shape("square")
-paddle_a.shapesize(stretch_wid=5, stretch_len=1)
-paddle_a.color("white")
-paddle_a.penup()
-paddle_a.goto(-350, 0)
+ball = turtle.Turtle()
+ball.speed(0)
+ball.shape("circle")
+ball.color("white")
+ball.penup()
+ball.goto(0, 0)
+
+
+# Function
+def paddle_a_up():
+    y = paddle_a.ycor()
+    y += 20
+    paddle_a.sety(y)
+
+# Keyboard binding
 
 # Main game loop
 while True:
